@@ -1,0 +1,110 @@
+<template>
+<div class="c-container">
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item padding="around-small" size="12">
+                <div class="page-section page-header">
+                    <h2>Registration</h2>
+                </div>
+            </lightning-layout-item>
+
+            <lightning-layout-item padding="around-small" size="12">
+                <lightning-layout>
+                    <lightning-layout-item padding="around-small" size="8">
+                        <div class="page-section page-right">
+                            <h2>Details</h2>
+                         <lightning-layout multiple-rows="true">
+                         
+                         <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="6" padding="around-small">
+        <lightning-input type="text" label="First Name"></lightning-input>
+        <lightning-input type="text" label="Contact Number"></lightning-input>
+                         </lightning-layout-item>
+
+                         <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="6" padding="around-small">
+        <lightning-input type="text" label="Last Name"></lightning-input>
+        <lightning-input type="text" label="Alternate Number"></lightning-input>
+                         </lightning-layout-item>
+
+        <!--Educational details box through conditional rendering-->
+        <template if:true={displayPage}>
+            <lightning-layout-item padding="around-small" size="12">
+                    <lightning-layout>
+                         <lightning-layout-item padding="around-small" size="12">
+                            <div class="page-section page-right">
+                                <h2>Educational Details</h2>
+                             <lightning-layout multiple-rows="true">
+
+                               <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="6" padding="around-small">
+                                <lightning-input type="text" label="High school"></lightning-input>
+                                <lightning-input type="text" label="Higher secondary Number"></lightning-input>
+                                 </lightning-layout-item>
+
+                        <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="6" padding="around-small">
+                                <lightning-input type="text" label="High school"></lightning-input>
+                                <lightning-input type="text" label="Higher secondary Number"></lightning-input>
+                                 </lightning-layout-item>
+
+                            </lightning-layout>
+                            </div>
+                        </lightning-layout-item>
+                       </lightning-layout>
+            </lightning-layout-item>
+        </template>
+        <!---->
+        <lightning-layout-item padding="around-small" size="12">
+            <lightning-layout>
+                 <lightning-layout-item padding="around-small" size="12">
+                    <div class="page-section page-right">
+                        <h2>Address Details</h2>
+                     <!-- <lightning-layout multiple-rows="true">
+
+                       <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="6" padding="around-small">
+                        <lightning-input-address address-label="Address" street-label="Street" city-label="City"
+                         country-label="Country"
+        province-label="Province"
+        postal-code-label="PostalCode"
+        street={address.street}
+        city={address.city}
+        country={address.country}
+        province={address.province}
+        postal-code={address.postalCode}
+        field-level-help="Help Text for inputAddress field" 
+        country-options={getCountryOptions}
+        province-options={getProvinceOptions}
+        onchange={handleChange} ></lightning-input-address>
+                         </lightning-layout-item>
+
+                    </lightning-layout> -->
+                    </div>
+                </lightning-layout-item>
+               </lightning-layout>
+    </lightning-layout-item>
+        <!---->
+            </lightning-layout>
+                       </div>
+                       </lightning-layout-item>
+                   
+                    <lightning-layout-item padding="around-small" size="4">
+                        <div class="page-section page-main">
+                         <h1><b>Personal Details:</b></h1>
+            <lightning-input type="text" label="Marital Status"></lightning-input>
+            <lightning-input type="text" label="Father's Name"></lightning-input>
+            <lightning-input type="text" label="Mother's Name"></lightning-input>
+            <lightning-input type="text" label="Father's occupation"></lightning-input>
+            <lightning-input type="text" label="Department"></lightning-input><br>
+            <lightning-radio-group name="radioGroup" label="Mother's Occupation" options={options} value={value} type="radio">
+            </lightning-radio-group>
+                    </div>
+                    <div class="page-section page-main">
+                        <h2>Address Details</h2>
+                        </div>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </lightning-layout-item>
+        </lightning-layout>
+
+    <div class="slds-align_absolute-center">
+    <lightning-button variant="brand" label="Submit" title="Submit" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+    <br><br><br><br>
+    </div>
+    </div>
+</template>

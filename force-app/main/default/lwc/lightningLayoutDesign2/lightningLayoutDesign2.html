@@ -1,0 +1,40 @@
+<template>
+    <p>Layout second</p>
+    <div class="slds-box slds-p-around_none slds-m-top_x-small slds-m-bottom_medium slds-m-horizontal_none">
+    <lightning-layout multiple-rows>
+        <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="4" padding="around-small">
+            <lightning-input type="text" label="First Name"></lightning-input>
+            <lightning-input type="text" label="Last Name"></lightning-input>
+            <lightning-input type="text" label="Contact Number"></lightning-input>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="4" padding="around-small">
+            <lightning-input type="text" label="Alternate number"></lightning-input>
+            <lightning-input type="text" label="Email"></lightning-input>
+            <lightning-input type="number" label="Age"></lightning-input>
+        </lightning-layout-item>
+
+            <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="4" padding="around-small">
+                <div class="custom-box slds-box slds-p-around_medium">
+                <h1><b>Personal Details:</b></h1>
+                <lightning-input type="text" label="Marital Status"></lightning-input>
+                <lightning-input type="text" label="Father's Name"></lightning-input>
+                <lightning-input type="text" label="Mother's Name"></lightning-input>
+                <lightning-input type="text" label="Father's occupation"></lightning-input>
+                <lightning-input type="text" label="Department"></lightning-input>
+                <lightning-radio-group name="radioGroup" label="Mother's Occupation" options={options} value={value} type="radio">
+                </lightning-radio-group>
+            </div>
+        </lightning-layout-item>
+
+        <!-- <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="8" padding="around-small">
+            <div class="custom-box slds-box slds-p-around_medium"><h1>Educational Details:</h1></div>
+        </lightning-layout-item> -->
+
+        <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="4" padding="around-small">
+            <lightning-button variant="brand" label="Submit" title="Download action with brand variant" icon-name="standard:output" class="button">
+            </lightning-button>
+        </lightning-layout-item>
+        </lightning-layout>
+    </div>
+</template>

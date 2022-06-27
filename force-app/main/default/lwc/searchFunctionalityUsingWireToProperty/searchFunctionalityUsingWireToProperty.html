@@ -1,0 +1,55 @@
+<!-- <template>
+    <lightning-card title="ApexWireMethodToProperty" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+           <lightning-input type="search" placeholder="Search by Name & Phone" 
+           class="slds-m-bottom_small" label="Search"></lightning-input>
+           <lightning-button variant="brand" label="Success" title="Success" onclick={handleSearch}
+            class="slds-m-left_x-small"></lightning-button>
+                <template for:each={accounts.data} for:item="account">
+                    <p key={account.Id}>{account.Name}</p>
+                    <p key={account.Id}>{account.Phone}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template> -->
+<template>
+    <div class="slds-box slds-p-around_none slds-m-top_x-small slds-m-bottom_medium slds-m-horizontal_none">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="2" padding="around-small">
+            </lightning-layout-item>
+            <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="8" padding="around-small">
+                <h2>Search Component</h2>
+            <div class="custom-box slds-box slds-p-around_medium">
+             <lightning-input type="search" placeholder="Search by Name & Phone number" class="slds-m-bottom_small" variant="label-hidden"
+             label="Search"></lightning-input><br>
+            <lightning-button variant="brand" label="Search Data" title="Success" onclick={handleSearch} class="slds-m-left_x-small"></lightning-button>
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="2" padding="around-small">
+            </lightning-layout-item>
+
+            <!--Displaying the searched data-->
+            <template if:true={showSpinner}>
+            <template for:each={accounts.data} for:item="account">
+
+                <lightning-layout-item key={account.Id} size="12" small-device-size="6" medium-device-size="4" large-device-size="12" padding="around-small">
+                <div class="custom-box slds-box slds-p-around_medium">
+                    <h2><b></b>Searched Account Details will appear here:</b></h2>
+                    <lightning-layout multiple-rows="true">
+                      <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="6" padding="around-small">
+                    <lightning-input type="text" value={account.Id} key={account.Id} label="Account Id"></lightning-input><br>
+                    <lightning-input type="text" value={account.Name} key={account.Id} label="Name"></lightning-input>
+                </lightning-layout-item>  
+                <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="6" padding="around-small">
+                <lightning-input type="text" value={account.Phone} key={account.Id} label="Phone Number"></lightning-input><br>
+                <lightning-input type="text" value={account.Industry} key={account.Id} label="Industry"></lightning-input>
+                </lightning-layout-item>
+                    </lightning-layout>
+                    </div>
+                </lightning-layout-item>
+            </template>
+        </template>
+            
+        </lightning-layout>
+    </div>
+</template>

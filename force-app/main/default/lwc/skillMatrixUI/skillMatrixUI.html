@@ -1,0 +1,37 @@
+<template>
+    <h3 class="slds-text-heading_medium slds-align_absolute-center"><strong style="color:#2383b2;">Welcome to Skill Matrix & Incubation Lab Portal </strong></h3>
+    <lightning-tabset class="customTab">
+        <lightning-tab label="Skill Matrix">
+        </lightning-tab>
+        <lightning-tab label="Support">
+        </lightning-tab>
+
+    </lightning-tabset>
+        <lightning-progress-indicator current-step="3" type="base" has-error="true" variant="base" onclick={handleClick}>
+            <lightning-progress-step label="Contact Details" value="1"></lightning-progress-step>
+            <lightning-progress-step label="Skills" value="2"></lightning-progress-step>
+            <lightning-progress-step label="Certifications" value="3"></lightning-progress-step>
+            <lightning-progress-step label="Partner Portal Access" value="4"></lightning-progress-step>
+        </lightning-progress-indicator>
+
+    <template if:true={displayPage}>
+        <lightning-layout multiple-rows>
+        <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="4" padding="around-small">
+        </lightning-layout-item>
+     
+        <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="4" padding="around-small">
+        <lightning-input type="text" label="First name" required></lightning-input><br>
+        <lightning-input type="Email" label="Email" required></lightning-input><br>
+        <lightning-input type="Email" label="Employee Id" required></lightning-input><br>
+        <lightning-combobox label="Job level" required></lightning-combobox>
+        </lightning-layout-item>
+     
+        <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="4" padding="around-small">
+            <lightning-input type="text" label="Last name" required></lightning-input><br>
+            <lightning-input type="phone" label="Mobile Number" required></lightning-input><br>
+            <lightning-combobox label="Designation" required></lightning-combobox ><br>
+            <lightning-input type="Number" label="Total IT Experience(Yr)" required></lightning-input>
+        </lightning-layout-item>
+            </lightning-layout>
+        </template>
+</template>

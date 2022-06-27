@@ -1,0 +1,139 @@
+<template>
+    <div class="slds-box slds-p-around_none slds-m-top_x-small slds-m-bottom_medium slds-m-horizontal_none">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="3" padding="around-small">
+                                    <lightning-input type="text" label="Employee" value={name} readonly></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="3" padding="around-small">
+                                    <lightning-input type="text" label="Week beginning from"></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="3" padding="around-small">
+                            <lightning-input type="text" label="Summary" value="total" readonly></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="3" padding="around-small">
+            <lightning-button-icon icon-name="utility:settings"  alternative-text="Settings" title="Settings"></lightning-button-icon>
+            </lightning-layout-item>
+
+            <lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="12" padding="around-small">
+<table class="slds-table slds-table_cell-buffer slds-table_bordered slds-border_top slds-border_right slds-border_bottom slds-border_left slds-table_col-bordered" aria-label="Example table of Opportunities with vertical borders">
+<thead>
+<tr class="slds-line-height_reset">
+<th class="" scope="col">
+<div class="slds-truncate" title="Opportunity Name">
+
+</div>
+</th>
+<th class="" scope="col">
+<div class="slds-truncate" title="Project">Project</div>
+</th>
+<th class="" scope="col">
+<div class="slds-truncate" title="Task">Task</div>
+</th>
+<th class="" scope="col">
+<div class="slds-truncate" title="Stage">Monday</div>
+</th>
+<th class="" scope="col">
+<div class="slds-truncate" title="Confidence">Tuesday</div>
+</th>
+<th class="" scope="col">
+<div class="slds-truncate" title="Amount">Wednesday</div>
+</th>
+<th class="" scope="col">
+<div class="slds-truncate" title="Contact">Thursday</div>
+</th>
+<th class="" scope="col">
+<div class="slds-truncate" title="Contact">Friday</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="slds-hint-parent">
+<th data-label="Opportunity Name" scope="row">
+<div class="slds-truncate" title="Cloudhub">
+<!-- <lightning-button-icon icon-name="utility:settings"  alternative-text="Settings" title="Settings"></lightning-button-icon> -->
+</div>
+</th>
+<td data-label="Account Name">
+<div class="slds-truncate" title="Cloudhub">
+    {projectPicklist.data}
+    <template if:true={projectPicklist.data}>
+        <lightning-combobox name="Project" label="" value={projectvalue}
+            options={projectPicklist.data.values} onchange={handleChange}>
+        </lightning-combobox>
+    </template>
+</div>
+</td>
+<td data-label="Close Date">
+<div class="slds-truncate" title="">
+<lightning-combobox
+            name="Task"
+            label=""
+            value={value}
+            placeholder="Select Task"
+            options={options}
+            onchange={handleChange} ></lightning-combobox>
+</div>
+</td>
+<td data-label="Prospecting">
+<div class="slds-truncate" title="Prospecting">
+    <lightning-input type="text" label="Enter some text" variant="label-hidden" value="0"></lightning-input>
+</div>
+</td>
+<td data-label="Confidence">
+<div class="slds-truncate" title="20%">
+        <lightning-input type="text" label="Enter some text" variant="label-hidden" value="0"></lightning-input>
+</div>
+</td>
+<td data-label="Amount">
+<div class="slds-truncate" title="$25k">
+        <lightning-input type="text" label="Enter some text" variant="label-hidden" value="0"></lightning-input>
+</div>
+</td>
+<td data-label="Contact">
+<div class="slds-truncate" title="jrogers@cloudhub.com">
+    <lightning-input type="text" label="Enter some text" variant="label-hidden" value="0"></lightning-input>
+</div>
+</td>
+<td data-label="Contact">
+<div class="slds-truncate" title="jrogers@cloudhub.com">
+    <lightning-input type="text" label="Enter some text" variant="label-hidden" value="0"></lightning-input>
+</div>
+</td>
+</tr>
+<tr class="slds-hint-parent">
+<th data-label="Opportunity Name" scope="row">
+<div class="slds-truncate" title="Cloudhub + Anypoint Connectors">
+</div>
+</th>
+<td data-label="Account Name">
+<div class="slds-truncate" title="Cloudhub">0</div>
+</td>
+<td data-label="Close Date">
+<div class="slds-truncate" title="4/14/2015">0</div>
+</td>
+<td data-label="Prospecting">
+<div class="slds-truncate" title="Prospecting">0</div>
+</td>
+<td data-label="Confidence">
+<div class="slds-truncate" title="20%">0</div>
+</td>
+<td data-label="Amount">
+<div class="slds-truncate" title="$25k">0</div>
+</td>
+<td data-label="Contact">
+<div class="slds-truncate" title="jrogers@cloudhub.com">0</div>
+</td>
+<td data-label="Contact">
+<div class="slds-truncate" title="jrogers@cloudhub.com">0</div>
+</td>
+</tr>
+</tbody>
+</table>
+    </lightning-layout-item>   
+
+<lightning-layout-item size="12" small-device-size="6" medium-device-size="4" large-device-size="12" padding="around-small">
+            <lightning-button variant="brand" label="Submit" title="Primary action" onclick={handleClick} class=" slds-align_absolute-center"></lightning-button>
+</lightning-layout-item>
+        </lightning-layout>
+    </div>
+</template>

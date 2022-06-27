@@ -1,0 +1,9 @@
+.list-first{
+    border-top: var(--lwc-borderWidthThin, 1px) solid #41A798;
+    padding-top: 5px;
+}
+
+.list-last{
+    border-bottom: var(--lwc-borderWidthThin, 10px) solid #41A798;
+    padding-bottom: 5px;
+}

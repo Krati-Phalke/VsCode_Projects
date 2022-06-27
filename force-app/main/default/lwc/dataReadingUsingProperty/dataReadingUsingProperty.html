@@ -1,0 +1,10 @@
+<template>
+    <lightning-card  title="Data Binding using Property">
+      <lightning-input type="text" label="Enter First name" name="firstName" onchange={handleNameChange}></lightning-input>
+      <p>{firstName}</p>
+      <lightning-input type="text"  label="Enter Last name" name="lastName" onchange={handleLastNameChange}></lightning-input>
+      <lightning-button label="Save" variant="Success" onclick={handleButton}></lightning-button>
+
+    </lightning-card>
+    
+</template>

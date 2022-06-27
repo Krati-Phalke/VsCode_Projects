@@ -1,0 +1,58 @@
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <img src={IceCreameLogo} alt="IceCreame" class="customIcon">
+           <b>My IceCreame</b>
+        </h3> 
+        <template if:true={icecreames}>
+        <lightning-layout multiple-rows="true" pull-to-boundary="small">
+            <template for:each={icecreames} for:item="ice">
+                <lightning-layout-item key={ice.Id} size="3" class="slds-var-p-around_x-small">
+                <lightning-card title={ice.Name} class="bear-tile" data-id={ice.Id}>
+                        <div class="slds-var-p-horizontal_small bear-tile-body">
+                        <div class="slds-media">
+                            <div class="slds-media__figure">
+                                <img src={IceCreameLogo} alt="Bear profile" class="bear-silhouette"/>
+                            </div>
+                        <div class="slds-media__body">    
+                        <p class="slds-var-m-bottom_xx-small"><abbr title="Type">Type: </abbr>{ice.Type__c}</p>
+                        <p class="slds-var-m-bottom_xx-small"><abbr title="Quantity">Quantity: </abbr>{ice.Quantity__c}</p>
+                        <p class="slds-var-m-bottom_xx-small"><abbr title="Packs">Icecreame Packs: </abbr>{ice.Icecreame_Packs__c}</p>
+                        </div>    
+                        </div>
+                        </div>
+                </lightning-card>
+                </lightning-layout-item>
+            </template>
+        </lightning-layout>
+    </template>
+    </lightning-card>    
+</template>
+
+
+<!-- <template>
+    <template if:true={icecreames}>
+    <lightning-layout multiple-rows="true" pull-to-boundary="small">
+    <lightning-card>
+        <h3 slot="title">
+            <img src={IceCreameLogo} alt="IceCreame" class="customIcon">
+           <b>My IceCreame</b>
+        </h3>      
+        <template for:each={icecreames} for:item="ice">
+            <lightning-layout-item key={ice.Id} size="3" class="slds-var-p-around_x-small">
+                <div class="slds-var-p-horizontal_small bear-tile-body">
+                    <div class="slds-media">
+                        <div class="slds-media__body">
+                            <p class="slds-var-m-bottom_xx-small">{ice.name}</p>
+                            <p class="slds-var-m-bottom_xx-small">{ice.type}</p>
+                            <p class="slds-var-m-bottom_xx-small">{ice.quantity}</p>
+                            <p class="slds-var-m-bottom_xx-small">{ice.icecreamePack}</p>
+                        </div>
+                    </div>
+                </div>                   
+            </lightning-layout-item>
+        </template>
+    </lightning-card>
+</lightning-layout>
+</template>
+</template> -->

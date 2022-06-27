@@ -1,0 +1,10 @@
+<template>
+    <lightning-card  title="Data Binding using QuerySelectorAll">
+        <lightning-input type="text" label="Enter First name" name="firstName"></lightning-input>
+        <lightning-input type="text"  label="Enter Last name" name="lastName"></lightning-input>
+        <lightning-button label="Save" variant="Success" onclick={handleButton}></lightning-button>
+        <span>
+            <p>{firstName}: {lastName}</p>
+            </span>
+    </lightning-card>
+</template>

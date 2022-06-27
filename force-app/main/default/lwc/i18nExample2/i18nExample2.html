@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="i18n Example" icon-name="custom:custom33"></lightning-card>
+    <div class="slds-text-heading_large slds-border_bottom">{label.welcomeHeader}</div>
+    <div class="slds-text-body_regular slds-m-top_xx-small slds-m-bottom_medium">{label.WelcomeText}</div>
+
+    <lightning-input type="text" label={label.Firstname} value={firstName}></lightning-input>
+    <lightning-input type="text" label={label.Lastname} value={lastname}></lightning-input>
+    <lightning-input type="email" label={label.Email} value={email} placeholder={placeholder.EmailPlaceholder}></lightning-input>
+    <lightning-input type="text" label={label.Contact} value={contact}></lightning-input>
+    <lightning-combobox label={label.favoriteSeason} value={season} placeholder={placeholder.SeasonPlaceholder}
+    options={seasons}></lightning-combobox><br>
+
+    <!-- <lightning-button variant="success" label={submitButton} title="Successful action" onclick={handleClick}></lightning-button> -->
+    <lightning-button variant="success" label={label.submitButton} title="Successful action" onclick={handleClick}></lightning-button>
+</template>

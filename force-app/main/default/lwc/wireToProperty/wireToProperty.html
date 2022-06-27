@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="ApexWireMethodToProperty" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+            <template if:true={accounts.data}>
+                <template for:each={accounts.data} for:item="account">
+                    <p key={account.Id}>Name: {account.Name}</p>
+                    <p key={account.Id}>Industry: {account.Industry}</p>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

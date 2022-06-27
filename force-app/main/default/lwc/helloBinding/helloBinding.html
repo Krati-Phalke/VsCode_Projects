@@ -1,0 +1,10 @@
+<template>
+    <!--Change the value of a bound property when the value of an input field changes.
+        Type something in the input field to see the recipe in action.-->
+    <lightning-card title="Hello" icon-name="custom:custom14">
+        <div class="slds-var-m-around_medium">
+            <p>Hello, {greeitng}!</p>
+            <lightning-input label="Name" value={greeting} onchange={handleChange}></lightning-input>
+        </div>
+    </lightning-card>
+</template>

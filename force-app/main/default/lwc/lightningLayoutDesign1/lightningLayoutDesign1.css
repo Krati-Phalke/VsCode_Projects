@@ -1,0 +1,9 @@
+.customIcon{
+    width: 2%;
+    height: 2%;
+    /* margin: px; */
+}
+lightning-button.button{
+    --sds-c-button-brand-color-background: #c11818;
+    --sds-c-button-text-color: #ffffff;
+}

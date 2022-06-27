@@ -1,0 +1,21 @@
+<template>
+    <div class="c-container" style="background-color:white;">
+        <lightning-layout>
+            <lightning-layout-item padding="around-small">
+                <lightning-input data-id="Test" type="number" name="" variant="label-hidden" placeholder="Number to convert" value={numbertoconvert} onchange={handleChange}></lightning-input>
+            </lightning-layout-item>
+  
+            <lightning-layout-item padding="around-small">
+               <lightning-combobox name="" label="" variant="label-hidden" value={selectedOption} placeholder="Select" options={options} onchange={handleSelect}>     </lightning-combobox>
+            </lightning-layout-item>
+  
+            <lightning-layout-item padding="around-small">
+               <lightning-button variant="brand" label="Convert" title="Convert" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+           </lightning-layout-item>
+  
+           <lightning-layout-item padding="around-small">
+               <lightning-input type="number" name="" variant="label-hidden" value={convertedValue} disabled="true"></lightning-input>Millisecond
+           </lightning-layout-item>
+      </lightning-layout>
+    </div>
+</template>

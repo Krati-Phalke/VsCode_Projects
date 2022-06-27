@@ -1,0 +1,14 @@
+.customIcon{
+    width: 10%;
+    height: 5%;
+    margin: 5px;
+}
+.bear-tile {
+    border: 1px solid #d2955d;
+    border-radius: .25rem;
+    display: block;
+}
+
+.bear-silhouette {
+    height: 50px;
+}

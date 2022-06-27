@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Get picklist values of project field" icon-name="standard:user">
+        <div class="slds-m-around_medium">
+            <template if:true={projectPicklist.data}>
+                <lightning-combobox name="Project Code" label="" value={projectvalue}
+                    options={projectPicklist.data.values} onchange={handleChange}>
+                </lightning-combobox>
+            </template>
+            <p>Selected value is: {projectvalue}</p>
+        </div>
+    </lightning-card>
+</template>

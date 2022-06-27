@@ -1,0 +1,18 @@
+<template>
+<lightning-input type="search" label="Enter FirstName/LastName/Email" value={searchKey}></lightning-input>
+<lightning-button variant="brand" label="Search Data" title="Success" onclick={handleSearch} class="slds-m-left_x-small"></lightning-button><br>
+        <template if:true={contacts}>
+            <template for:each={contacts} for:item ="con">
+                <div class="slds-box slds-m-bottom_small" key={con.Id}>
+                        <h2><b>Id:&nbsp;</b>{con.Id}</h2>
+                        <h2><b>FirstName:&nbsp;</b>{con.FirstName}</h2>
+                        <h2><b>LastName:&nbsp;</b>{con.LastName}</h2>
+                        <h2><b>Phone:&nbsp;</b>{con.Phone}</h2>
+                        <h2><b>Email:&nbsp;</b>{con.Email}</h2>
+                </div>
+            </template>
+            <template if:true={err}>
+                {error}>
+            </template>
+</template>
+</template>
